@@ -1,0 +1,53 @@
+/**
+ * Base Modal CSS.
+ * Defines the base behaviour for the modal
+ *
+ * @author    Chris Yates
+ * @copyright Copyright &copy; 2015 BeastBytes - All Rights Reserved
+ * @license   BSD 3-Clause
+ * @package   CssWidgets
+ */
+
+/* Hide the control elements */
+.modal__control {
+    display: none;
+}
+
+/* Hide content by default */
+.modal__container {
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.modal {
+    margin: 20vh auto 10vh;
+    max-height: 0;
+    max-width: 50vw;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.modal__close {
+    position: absolute;
+    right: 0.75em;
+    top: 0.75em;
+}
+
+/* Show content when the control checked */
+.modal__control:checked ~ .modal__container {
+    height: 100vh;
+}
+
+/**
+ * These properties can be transitioned
+ */
+.modal__control:checked ~ .modal__container .modal {
+    max-height: 70vh;
+    opacity: 1;
+}

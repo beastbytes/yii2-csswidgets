@@ -1,0 +1,57 @@
+/**
+ * Accordion CSS.
+ * This file defines the look of the accordion
+ *
+ * @author    Chris Yates
+ * @copyright Copyright &copy; 2015 BeastBytes - All Rights Reserved
+ * @license   BSD 3-Clause
+ * @package   CssWidgets
+ */
+
+.accordion {
+    margin: auto;
+    padding: 0;
+}
+
+.accordion__header {
+    background-color: hsl(208, 25%, 61%);
+    border-bottom: solid 2px hsl(208, 25%, 45%);
+    color: hsl(0, 0, 100%);
+    cursor: ns-resize;
+    display: block;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0.75em 1.5em;
+    transition: all 2s ease;
+}
+
+.accordion__header:hover {
+    background-color: hsl(208, 25%, 50%);
+}
+
+.accordion__control:disabled ~ .accordion__header {
+    background-color: hsl(208, 15%, 61%);
+    cursor: default;
+}
+.accordion__control:disabled ~ .accordion__header:hover {
+    background-color: hsl(208, 15%, 61%);
+}
+
+/* hide content by default */
+.accordion__content {
+    background-color: hsl(208, 25%, 98%);
+    line-height: 1.25em;
+    transition: all 2s ease;
+}
+
+/* Show content when the control checked */
+.accordion__control:checked ~ .accordion__header {
+    background-color: hsl(208, 25%, 71%);
+    color: #000;
+}
+
+.accordion__control:checked ~ .accordion__content {
+    padding: 0.75em 1.5em;
+}

@@ -1,0 +1,37 @@
+/**
+ * Tabs CSS.
+ * This file defines the look of the tabs
+ *
+ * @author    Chris Yates
+ * @copyright Copyright &copy; 2015 BeastBytes - All Rights Reserved
+ * @license   BSD 3-Clause
+ * @package   CssWidgets
+ */
+
+.tabs {
+    margin: auto;
+    padding: 0;
+    width: 500px;
+}
+
+.tabs__header {
+    padding:  10px;
+    display:block;
+
+    font-family: 'Bree Serif', 'serif';
+    font-size: 30px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+    background-color: #3498db;
+    border-bottom: solid 8px #2980b9;
+}
+
+/* hide content by default */
+.tabs__content {
+    padding: 10px;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-size: 19px;
+    line-height: 26px;
+    background-color: #2ecc71;
+}

@@ -1,0 +1,34 @@
+/**
+ * Base Tabs CSS.
+ * Defines the base behaviour for the tabs
+ *
+ * @author    Chris Yates
+ * @copyright Copyright &copy; 2015 BeastBytes - All Rights Reserved
+ * @license   BSD 3-Clause
+ * @package   CssWidgets
+ */
+
+.tabs__headers:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.tabs__header {
+    display: inline-block;
+    float: left;
+}
+
+/* Hide the control elements */
+.tabs__control {
+    display: none;
+}
+
+/* Hide content by default */
+.tabs__content {
+    display: none;
+}
+
+/* Show content when the control checked */
+.tabs__control:checked + .tabs__content {
+    display: block;
+}

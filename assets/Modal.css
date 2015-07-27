@@ -1,0 +1,46 @@
+/**
+ * Modal CSS.
+ * This file defines the look of the modal
+ *
+ * @author    Chris Yates
+ * @copyright Copyright &copy; 2015 BeastBytes - All Rights Reserved
+ * @license   BSD 3-Clause
+ * @package   CssWidgets
+ */
+
+.modal__container {
+    background-color: hsla(208, 25%, 61%, 0.33);
+}
+
+.modal {
+    box-shadow: 0px 1px 26px -3px hsl(0, 0%, 30%);
+    transition: all 2s ease;
+}
+
+.modal__title {
+    background-color: hsl(208, 25%, 61%);
+    color: hsl(0, 0%, 100%);
+    display: block;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0.75em 1.5em;
+}
+
+/* hide content by default */
+.modal__content {
+    background-color: hsl(208, 25%, 98%);
+    padding: 0.75em 1.5em;
+    line-height: 1.25em;
+}
+
+.modal__close {
+    background-color: hsl(357, 67%, 61%);
+    border-radius: 2em;
+    color: hsl(0, 0%, 100%);
+    padding: 0.375em 0.75em;
+}
+.modal__close:hover {
+    background-color: hsl(357, 56%, 45%);
+}

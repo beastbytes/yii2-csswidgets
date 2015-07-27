@@ -1,0 +1,23 @@
+{
+    "name": "beastbytes/yii2-csswidgets",
+    "description": "Yii2 Extension that provides UI widgets implemented in CSS only",
+    "keywords": ["yii2", "accordion", "modal", "tabs", "CSS", "UI", "widget"],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/beastbytes/yii2-csswidgets/issues",
+        "source": "https://github.com/beastbytes/yii2-csswidgets"
+    },
+    "authors": [
+        {
+            "name": "Chris Yates",
+            "email": "chris.l.yates@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": { "beastbytes\\csswidgets\\": "" }
+    }
+}
