@@ -41,7 +41,7 @@ class Accordion extends Widget
      * CSS for the widget must be provided elsewhere.
      * string, the fully qualified class name of the widget's CSS asset bundle.
      */
-     public $assetBundle = '\beastbytes\cssWidgets\AccordionAsset';
+     public $assetBundle = '\beastbytes\csswidgets\AccordionAsset';
     /**
      * @var boolean whether the labels for header items should be HTML-encoded.
      */
