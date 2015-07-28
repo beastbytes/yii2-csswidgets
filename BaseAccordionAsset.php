@@ -16,7 +16,7 @@ namespace beastbytes\csswidgets;
  */
 class BaseAccordionAsset extends \yii\web\AssetBundle
 {
-	public $basePath   = '@webroot';
-	public $sourcePath = '@beastbytes/cssWidgets/assets';
+    public $basePath   = '@webroot';
+    public $sourcePath = '@beastbytes/yii2-csswidgets/assets';
     public $css        = ['BaseAccordion.css'];
 }
