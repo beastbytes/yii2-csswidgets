@@ -16,8 +16,8 @@ namespace beastbytes\csswidgets;
  */
 class ModalAsset extends \yii\web\AssetBundle
 {
-	public $basePath   = '@webroot';
-	public $sourcePath = '@beastbytes/cssWidgets/assets';
-	public $depends    = ['beastbytes\cssWidgets\BaseModalAsset'];
+    public $basePath   = '@webroot';
+    public $sourcePath = '@beastbytes/yii2-csswidgets/assets';
+    public $depends    = ['beastbytes\csswidgets\BaseModalAsset'];
     public $css        = ['Modal.css'];
 }
