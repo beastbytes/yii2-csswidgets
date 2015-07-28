@@ -16,8 +16,8 @@ namespace beastbytes\csswidgets;
  */
 class TabsAsset extends \yii\web\AssetBundle
 {
-	public $basePath   = '@webroot';
-	public $sourcePath = '@beastbytes/cssWidgets/assets';
-	public $depends    = ['beastbytes\cssWidgets\BaseTabsAsset'];
+    public $basePath   = '@webroot';
+    public $sourcePath = '@beastbytes/yii2-csswidgets/assets';
+    public $depends    = ['beastbytes\csswidgets\BaseTabsAsset'];
     public $css        = ['Tabs.css'];
 }
