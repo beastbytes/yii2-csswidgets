@@ -8,7 +8,7 @@
  * @package   CssWidgets
  */
 
-namespace beastbytes\cssWidgets;
+namespace beastbytes\csswidgets;
 
 use yii\helpers\Html;
 use yii\helpers\StringHelper;
