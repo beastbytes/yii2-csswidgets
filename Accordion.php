@@ -8,7 +8,7 @@
  * @package   CssWidgets
  */
 
-namespace beastbytes\cssWidgets;
+namespace beastbytes\csswidgets;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
