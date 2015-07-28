@@ -35,7 +35,7 @@ class Tabs extends Widget
      * @var string Fully qualified class name of the widget's CSS asset bundle.
      * This should have `$depends` = [`\beastbytes\cssWidgets\BaseTabsAsset`]
      */
-     public $assetBundle = '\beastbytes\cssWidgets\TabsAsset';
+     public $assetBundle = '\beastbytes\csswidgets\TabsAsset';
     /**
      * @var array list of tabbed items. Each item is an array of the following
      * structure:
