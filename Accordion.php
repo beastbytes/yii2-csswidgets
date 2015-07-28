@@ -24,15 +24,17 @@ use yii\helpers\Html;
 class Accordion extends Widget
 {
     /**
-     * @var $options the HTML attributes for the widget container tag. The following special options are recognized:
+     * @var $options the HTML attributes for the widget container tag. The
+     * following special options are recognized:
      *
      * - single: boolean, defaults to `true`, if `true` only one section of the
      * accordion can be expanded; if `false` sections can be expanded and
      * collapsed individually
-     * - tag: string, defaults to "div", the tag name of the container tag of this widget
+     * - tag: string, defaults to "div", the tag name of the container tag of
+     * this widget
      *
-     * NOTE: various elements of the widget are assigned a class and/or an id in order to
-     * implemet the accordion behaviour
+     * NOTE: various elements of the widget are assigned a class and/or an id in
+     * order to implemet the accordion behaviour
      */
     /**
      * @var boolean|string boolean, `false` no asset bundle will be published;
@@ -45,39 +47,44 @@ class Accordion extends Widget
      */
     public $encodeLabels = true;
     /**
-     * @var array list of collapsible items. Each item can be an array of the following structure:
+     * @var array list of collapsible items. Each item is an array of the
+     * following structure:
      *
-     * ~~~
-     * [
-     *     'header' => 'Item header',
-     *     'content' => 'Item content',
-     *     // the HTML attributes of the item header container tag. This will overwrite "headerOptions".
-     *     'headerOptions' => [],
-     *     // the HTML attributes of the item container tag. This will overwrite "itemOptions".
-     *     // the following special options are recognised:
-     *     // - expanded: boolean, defaults to `false`, whether this section is expanded
-     *     // - expandable: boolean, defaults to `true`, whether this section is expandable
-     *     'options' => [],
-     * ]
-     * ~~~
+     ~~~
+     [
+         'header' => 'Item header',
+         'content' => 'Item content',
+         // the HTML attributes of the item header container tag. This will overwrite "headerOptions".
+         'headerOptions' => [],
+         // the HTML attributes of the item container tag. This will overwrite "itemOptions".
+         // the following special options are recognised:
+         // - expanded: boolean, defaults to `false`, whether this section is expanded
+         // - enabled: boolean, defaults to `true`, whether this section is enabled
+         'options' => [],
+     ]
+     ~~~
      */
     public $items = [];
     /**
-     * @var array list of HTML attributes for the item container tags. This will be overwritten
-     * by the "options" set in individual [[items]]. The following special options are recognized:
+     * @var array list of HTML attributes for the item container tags. This will
+     * be overwritten by the "options" set in individual [[items]]. The
+     * following special options are recognized:
      *
      * - tag: string, defaults to "div", the tag name of the item container tags.
      *
-     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @see \yii\helpers\Html::renderTagAttributes() for details of how
+     * attributes are rendered.
      */
     public $itemOptions = [];
     /**
-     * @var array list of HTML attributes for the item header container tags. This will be overwritten
-     * by the "headerOptions" set in individual [[items]]. The following special options are recognized:
+     * @var array list of HTML attributes for the item header container tags.
+     * This will be overwritten by the "headerOptions" set in individual
+     * [[items]]. The following special options are recognized:
      *
      * - tag: string, defaults to "div", the tag name of the item container tags.
      *
-     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @see \yii\helpers\Html::renderTagAttributes() for details of how
+     * attributes are rendered.
      */
     public $headerOptions = [];
 
@@ -130,14 +137,14 @@ class Accordion extends Widget
             $control = ($single ? 'radio' : 'checkbox');
             $tag = ArrayHelper::remove($options, 'tag', 'div');
             $expanded = ArrayHelper::remove($options, 'expanded', false);
-            $expandable = ArrayHelper::remove($options, 'expandable', true);
+            $enabled = ArrayHelper::remove($options, 'enabled', true);
 
             $items[] = Html::tag(
                 $tag,
                 Html::$control($this->id, $expanded, [
                     'class' => 'accordion__control',
                     'id' => $itemId,
-                    'disabled' => !$expandable
+                    'disabled' => !$enabled
                 ]) .
                 Html::tag(
                     'label',

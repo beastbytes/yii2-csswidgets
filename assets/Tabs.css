@@ -9,29 +9,51 @@
  */
 
 .tabs {
-    margin: auto;
+    height: 30vh;
+    margin: 1em auto;
     padding: 0;
-    width: 500px;
+    width: 66.667%;
 }
 
 .tabs__header {
-    padding:  10px;
-    display:block;
-
-    font-family: 'Bree Serif', 'serif';
-    font-size: 30px;
-    line-height: 30px;
-    color: #FFFFFF;
-
-    background-color: #3498db;
-    border-bottom: solid 8px #2980b9;
+    background-color: hsl(208, 25%, 61%);
+    border-bottom: solid 2px hsl(208, 25%, 45%);
+    border-radius: 8px 8px 0 0;
+    color: hsl(208, 25%, 31%);
+    cursor: pointer;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0.375em 1.5em;
+    transition: all 2s ease;
+}
+.tabs__header:hover {
+    background-color: hsl(208, 25%, 50%);
 }
 
-/* hide content by default */
 .tabs__content {
-    padding: 10px;
-    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
-    font-size: 19px;
-    line-height: 26px;
-    background-color: #2ecc71;
+    background-color: hsl(208, 25%, 98%);
+    line-height: 1.25em;
+    transition: all 2s ease;
+}
+
+.tabs__control:checked ~ .tabs__header {
+    background-color: hsl(108, 25%, 71%);
+    color: hsl(108, 25%, 31%);
+    cursor: default;
+}
+
+.tabs__control:checked ~ .tabs__content {
+    padding: 0.75em 1.5em;
+    transition: opacity 2s ease;
+}
+
+.tabs__control:disabled ~ .tabs__header {
+    background-color: hsl(208, 15%, 61%);
+    color: hsl(208, 15%, 41%);
+    cursor: default;
+}
+.tabs__control:disabled ~ .tabs__header:hover {
+    background-color: hsl(208, 15%, 61%);
 }

@@ -9,16 +9,16 @@
  */
 
 .accordion {
-    margin: auto;
+    margin: 1em auto;
     padding: 0;
+    width: 66.667%;
 }
 
 .accordion__header {
     background-color: hsl(208, 25%, 61%);
     border-bottom: solid 2px hsl(208, 25%, 45%);
-    color: hsl(0, 0, 100%);
-    cursor: ns-resize;
-    display: block;
+    color: hsl(208, 25%, 31%);
+    cursor: pointer;
     font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
     font-size: 1.2em;
     font-weight: bold;
@@ -28,11 +28,12 @@
 }
 
 .accordion__header:hover {
-    background-color: hsl(208, 25%, 50%);
+    background-color: hsl(208, 25%, 51%);
 }
 
 .accordion__control:disabled ~ .accordion__header {
     background-color: hsl(208, 15%, 61%);
+    color: hsl(208, 15%, 41%);
     cursor: default;
 }
 .accordion__control:disabled ~ .accordion__header:hover {
@@ -48,8 +49,8 @@
 
 /* Show content when the control checked */
 .accordion__control:checked ~ .accordion__header {
-    background-color: hsl(208, 25%, 71%);
-    color: #000;
+    background-color: hsl(108, 25%, 71%);
+    color: hsl(108, 25%, 31%);
 }
 
 .accordion__control:checked ~ .accordion__content {

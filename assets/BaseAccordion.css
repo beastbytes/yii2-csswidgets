@@ -1,6 +1,6 @@
 /**
  * Base Accordion CSS.
- * Defines the base behaviour for the accordion
+ * Defines the accordion behaviour
  *
  * @author    Chris Yates
  * @copyright Copyright &copy; 2015 BeastBytes - All Rights Reserved
@@ -23,6 +23,7 @@
 }
 
 .accordion__header {
+    display: block;
     margin: 0;
     width: 100%;
 }

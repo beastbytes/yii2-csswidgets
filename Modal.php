@@ -36,20 +36,14 @@ class Modal extends Widget
      */
     public $encodeTitle = true;
     /**
-     * @var string label for the modal; when this is clicked the modal is shown
+     * @var string label for tge model; when this is clicked the modal is shown
      */
     public $label;
     /**
      * @var string title of the modal. If empty no title is rendered
      */
     public $title;
-    /**
-     * @var string content of the modal.
-     */
     public $content;
-    /**
-     * @var string Content of the modal's close button.
-     */
     public $close = 'X';
 
     private $_output;

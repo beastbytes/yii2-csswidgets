@@ -1,6 +1,6 @@
 /**
  * Base Tabs CSS.
- * Defines the base behaviour for the tabs
+ * Defines the tabs behaviour
  *
  * @author    Chris Yates
  * @copyright Copyright &copy; 2015 BeastBytes - All Rights Reserved
@@ -8,14 +8,13 @@
  * @package   CssWidgets
  */
 
-.tabs__headers:after {
-    content: '';
-    display: table;
-    clear: both;
+.tabs {
+    overflow: hidden;
+    position: relative;
 }
-.tabs__header {
-    display: inline-block;
-    float: left;
+
+.tabs__tab {
+    float:left;
 }
 
 /* Hide the control elements */
@@ -23,12 +22,23 @@
     display: none;
 }
 
+.tabs__header {
+    display: block;
+}
+
 /* Hide content by default */
 .tabs__content {
-    display: none;
+    box-sizing: border-box;
+    height: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
 }
 
 /* Show content when the control checked */
-.tabs__control:checked + .tabs__content {
-    display: block;
+.tabs__control:checked ~ .tabs__content {
+    height: 100%;
+    opacity: 1;
 }
