@@ -18,7 +18,6 @@ use yii\web\View;
 
 /**
  * CSS only Modal widget.
- * *********************** QUESTION: Can Fondation's Joyride be done in CSS?
  */
 class Modal extends Widget
 {
