@@ -8,7 +8,7 @@
  * @package   CssWidgets
  */
 
-namespace beastbytes\cssWidgets;
+namespace beastbytes\csswidgets;
 
 /**
  * BaseModalAsset Class.
