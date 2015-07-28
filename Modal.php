@@ -29,7 +29,7 @@ class Modal extends Widget
      * CSS for the widget must be provided elsewhere.
      * string, the fully qualified class name of the widget's CSS asset bundle.
      */
-     public $assetBundle = '\beastbytes\cssWidgets\ModalAsset';
+     public $assetBundle = '\beastbytes\yii2-csswidgets\ModalAsset';
     /**
      * @var boolean whether the title should be HTML-encoded.
      */
