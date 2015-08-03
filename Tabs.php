@@ -79,7 +79,7 @@ class Tabs extends Widget
      */
     public $headerOptions = [];
 
-    private $_activeTab = 0;
+    private $_activeTab;
 
     /**
      * Initialises the widget
@@ -88,16 +88,29 @@ class Tabs extends Widget
     {
         parent::init();
 
+        $enabledTab = null;
+
         foreach ($this->items as $i => $item) {
             $options = ArrayHelper::remove($item, 'options', []);
-            if (ArrayHelper::remove($options, 'active', false)) {
+            if ($this->_activeTab === null &&
+            ArrayHelper::remove($options, 'active', false)
+            ) {
                 $this->_activeTab = $i;
+            } elseif ($enabledTab === null &&
+            ArrayHelper::getValue($options, 'enabled', true)
+            ) {
+                $enabledTab = $i;
             }
+
             $this->items[$i]['options'] = $options;
+        }
+
+        if (empty($this->_activeTab)) {
+            $this->_activeTab = $enabledTab;
         }
     }
 
-        /**
+    /**
      * Renders the widget.
      */
     public function run()
